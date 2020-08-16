@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Dont Use ORM",
+    "description": "Api for Dont Use ORM",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Application info",
+        "responses": {
+          "200": {
+            "description": "ApiInformation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiInformation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "description": "Application status",
+        "responses": {
+          "200": {
+            "description": "ApiStatus",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiInformation": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "dont-use-orm"
+          },
+          "version": {
+            "type": "string",
+            "example": "1.0.0"
+          },
+          "repository": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "example": "git"
+              },
+              "url": {
+                "type": "string",
+                "example": "git+https://github.com/hermosilla/dont-use-orm.git"
+              }
+            }
+          },
+          "author": {
+            "type": "string",
+            "example": "Antonio Hermosilla Parra"
+          },
+          "license": {
+            "type": "string",
+            "example": "GPL-3.0"
+          },
+          "bugs": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "example": "https://github.com/hermosilla/dont-use-orm/issues"
+              }
+            }
+          },
+          "homepage": {
+            "type": "string",
+            "example": "https://github.com/hermosilla/dont-use-orm#readme"
+          }
+        }
+      },
+      "ApiStatus": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "online"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "dont-use-orm",
+  "version": "0.0.1",
+  "description": "Dont use ORM",
+  "main": "/src/app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "DEBUG=dontuseorm nodemon bin/www",
+    "swagger": "swagger-jsdoc -d assets/swaggerDef.js -o src/api/openapi.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hermosilla/dont-use-orm.git"
+  },
+  "keywords": [
+    "dont",
+    "use",
+    "orm"
+  ],
+  "author": "Antonio Hermosilla",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hermosilla/dont-use-orm/issues"
+  },
+  "homepage": "https://github.com/hermosilla/dont-use-orm#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.12",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "figlet": "^1.4.0",
+    "http-status": "^1.4.2",
+    "lodash": "^4.17.15",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "swagger-ui-express": "^4.1.4"
+  }
+}
